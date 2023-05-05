@@ -1,0 +1,63 @@
+@import url('https://fonts.cdnfonts.com/css/neris?styles=45768,45763,45761|adolphus');
+@import url('https://fonts.cdnfonts.com/css/adolphus');
+
+
+:root {
+    --cor-primaria: #edebec;
+    --cor-secundaria: #7f56a1;
+    --cor-terciaria:  #3e165f;
+    --cor-hover:  #3e165f;
+
+    --fonte-primaria: 'Adolphus', sans-serif;
+    --fonte-secundaria: 'Neris', sans-serif;
+}
+
+.portfolio {    
+    padding: 5% 20%;
+    display: flex;
+    align-items: center;    
+    flex-flow: column wrap;   
+}
+
+.portfolio__subtitulo {
+    padding: 3% 0% 2% 0%;  
+    font-family: var(--fonte-primaria);
+    font-weight: 900;
+    font-size: 2.12rem;
+    color: var(--cor-secundaria);
+}
+
+.portfolio__subtitulo__imagens{    
+    margin-bottom: 2%;    
+    display: flex;
+    gap: 20px;    
+}
+
+.portfolio__subtitulo__imagens__imagem{
+    box-shadow: -1px -1px 2px 1px #4D4D4D;
+    border-radius: 25px;
+    opacity: 0.9;    
+    transition: 0.5s;
+}
+
+.portfolio__subtitulo__imagens__imagem:hover{    
+    box-shadow: -1px -1px 10px 1px rgba(157, 0, 244, 0.7); 
+    opacity: 1;
+}
+
+
+@media (max-width: 1200px){  
+
+    .portfolio__subtitulo__imagens {        
+        flex-wrap: wrap;   
+        gap: 20px;                
+    }
+
+    .portfolio__subtitulo__imagens__imagem {
+        width: 80%;
+        gap: 1px;        
+    }  
+
+    
+}
+

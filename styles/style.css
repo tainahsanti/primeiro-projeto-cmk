@@ -1,0 +1,170 @@
+@import url('https://fonts.cdnfonts.com/css/neris?styles=45768,45763,45761|adolphus');
+@import url('https://fonts.cdnfonts.com/css/adolphus');
+
+:root {
+    --cor-primaria: #edebec;
+    --cor-secundaria: #7f56a1;
+    --cor-terciaria: #3e165f;
+    --cor-hover:  #3e165f;
+
+    --fonte-primaria: 'Adolphus', sans-serif;
+    --fonte-secundaria: 'Neris', sans-serif;
+}
+
+* { /* Sempre fazer o reset basico antes de começar a desenvolver para não ter que levar em consideração uma estilização já pronta do navegador -*/
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    box-sizing: border-box;  /*Faz com que a imagem/elemento filho não sai da tag body/elemento pai - Essencial*/
+    height: 100vh;
+    background-color: var(--cor-primaria);
+    color: var(--cor-terciaria);      
+}
+
+.cabecalho {
+    padding: 3% 0% 0% 15%;
+}
+
+.cabecalho__menu{    
+    display: flex;
+    gap: 80px
+}
+
+.cabecalho__menu__link{
+    font-family: var(--fonte-primaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-secundaria);
+    text-decoration: none;
+}
+
+.apresentacao{ /*Utilizar o flexbox*/
+    padding: 5% 15%; /*Usar para criar uma margem entre os conteudos e a página*/
+    display: flex; /*Para ativar o flexbox e fazer com que os itens fiquem alinhados*/
+    align-items: center; /*Fazer com que os itens alinhem no centro (Os itens serão alinhados a partir do imagem que tem a altura mais, por isso o texto está alinhado ao meio da imagem)*/
+    justify-content: space-between; /*Usar para justicar/dar espaço entre os elementos filhos Ex: Section e Img*/
+    gap: 3rem;
+}
+
+.apresentacao__conteudo{
+    width: 50%;
+    display: flex;
+    flex-direction: column; /*Para alinhar os items em coluna*/
+    gap: 40px; /*Para criar um espaçamento nos items*/    
+}
+
+.apresentacao__conteudo__titulo{
+    font-size: 2.25rem;
+    font-family: var(--fonte-primaria);
+}
+
+.titulo-destaque{
+    color: var(--cor-secundaria);
+}
+
+.apresentacao__conteudo__texto{
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+}
+
+.apresentacao__conteudo__links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.apresentacao__conteudo__links__subtitulo{
+    font-family: var(--fonte-primaria);
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+.apresentacao__conteudo__links__navegacao{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-family: var(--fonte-primaria);
+    font-weight: 900; /*Usar o peso da fonte*/
+    font-size: 1.5rem;
+    text-decoration: none; /*Usado para remover o sublinhado do link*/
+    color: var(--cor-terciaria);  /*Cor da fonte*/
+    width: 50%; /*Largura do background*/
+    text-align: center; /*Alinhamento de texto*/
+    padding: 16px 0 ; /*Primeiro valor inserido vertical, segundo valor horizontal*/
+    border: 2px solid var(--cor-secundaria); /* Tamanho da borda/tipo de borda solida ou tracejado/cor */
+    border-radius: 0px 30px; /*Mudar a borda do background color */
+    /* background-color: #9D00F4; */
+    transition: 0.5s; /*determina o tempo de transição para volta do estado normal*/
+    cursor: pointer; /*Adiciona o cursor*/
+}
+
+.apresentacao__conteudo__links__navegacao:hover{
+    background-color: var(--cor-hover); 
+    color: var(--cor-primaria);
+    padding: 3%;
+    }
+
+.apresentacao__imagem{
+    width: 50%;
+}
+
+.rodape{
+    padding: 0.8%;  
+    box-sizing: border-box;
+    position: absolute;
+    bottom:0;
+    width: 100%; 
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+    font-family: var(--fonte-secundaria);
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.rodape__about {
+    padding: 0.8%; 
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+    font-family: var(--fonte-secundaria);
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: center;
+}
+
+@media (max-width: 1200px) /* Criar responsividade, max-width de 400px para celular, max-width 800px para tablet*/ {    
+
+    .cabecalho {
+        padding: 15% 15% 0% 15%;  
+    }
+    
+   .cabecalho__menu {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-bottom: 5%;
+   }
+
+   .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+        gap: 50px;
+   } 
+
+   .apresentacao__conteudo {
+     width: auto; /* Colocar auto para o width acompanhar o padding do elemento pai podemos inserir 100% também*/
+   }
+
+   .apresentacao__conteudo__titulo {
+        font-size: 2rem;
+   }
+
+   .apresentacao__conteudo__texto {
+        font-size: 1.25rem ;
+   }
+
+   
+}
