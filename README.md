@@ -42,7 +42,7 @@ Foi meu primeiro contato com html e css, a parte de portfólio foi uma tentativa
 
 ## Como acessar
 
-<a href="https://primeiro-projeto-cmk.vercel.app/">Link aqui para acessar o site</a>
+<a href="https://primeiro-projeto-5qzuurs30-tainahsanti.vercel.app/">Link aqui para acessar o site</a>
 
 ## Agradecimentos
 
