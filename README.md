@@ -1,5 +1,7 @@
 <h1 align="center">Meu primeiro projeto - CMK - Comunicação e Marketing</h1>
 
+<h2 align="center">🛠️ Em construção</h2>
+
 ## Índice
 
 <ul>
